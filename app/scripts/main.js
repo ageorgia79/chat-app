@@ -45,8 +45,8 @@ function refreshChat(info) {
 
 $('.send').click(function() {
 
-  var textbox = $('.textbox').val();
-  $('.textbox').val('');
+  var message = $('.message').val();
+  $('.message').val('');
 
   var time = Date.now();
 
@@ -56,4 +56,3 @@ $('.send').click(function() {
 });
 
 setInterval(loadChat, 1000);
-
