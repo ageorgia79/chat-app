@@ -28,7 +28,7 @@
    
     <div><!--opening "div" tag-->
          <div class="header">
-            <h1>Iron Yard Chat Room</h1>
+            <h1>Syntactual Verbosity</h1>
             <button class="login">Log In</button>
         </div><!--closing tag for header-->
             <div class="container">
@@ -36,8 +36,8 @@
                 </div><!--closing tag for textappend-->
             </div><!--closing tag for container-->
         <div class="footer">
-            <input class="textbox"></input>
-            <button class="send">Send</button>
+            <input class="textbox" placeholder="Uncaught ReferrenceError: yourMessage is not defined" value=""></input>
+            <button class="send">Propagate</button>
         </div><!--closing tag for footer-->
     </div><!--closing tag for "div"-->   
                 
@@ -45,8 +45,8 @@
         <!--build script tags here-->
         <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-        <script type="text/template" class="text-append">
-            <div class="user"> <%= user %> </div>
+        <script type="text/template" class="chat-message">
+        <span><%=name || user%> : <%=message%><br></span>
         </script>
         <!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
