@@ -2,7 +2,7 @@
 
 var tinyServer;
 
-var user = 'Andy G';
+var user = 'Snake-Like Dinosaur';
 
 var msgbox = _.template($('.chat-message').text());
 
@@ -54,5 +54,12 @@ $('.send').click(function() {
 
   refreshChat(outgoing);
 });
+
+$('.message').keypress(function(e) {
+
+  if(e.which == 13) {
+    $('.send').click();
+  }
+})
 
 setInterval(loadChat, 1000);
