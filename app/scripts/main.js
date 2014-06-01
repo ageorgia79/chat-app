@@ -1,8 +1,8 @@
 'use strict';
 
-var tinyServer;
+var myServer;
 
-var user = 'Snake-Like Dinosaur';
+var user = 'Andy G';
 
 var msgbox = _.template($('.chat-message').text());
 
@@ -27,7 +27,7 @@ function loadChat () {
 
   $.getJSON('http://tiny-pizza-server.herokuapp.com/collections/chat-messages').done(function(data) {
 
-    tinyServer = data;
+    myServer = data;
 
     renderChat(data);
   });
@@ -55,10 +55,10 @@ $('.send').click(function() {
   refreshChat(outgoing);
 });
 
-$('.message').keypress(function(e) {
+$('.message').keypress(function(enter) {
 
-  if(e.which == 13) {
-    $('.send').click();
+  if(enter.which == 13) {
+    $('.send').click(); 
   }
 })
 
