@@ -17,13 +17,13 @@ function renderChat(data) {
   $('.textappend').empty();
 
 //starts from index point 0 and counts to the end of the array in which data will be pulled from//
-  for (var i = 0; i < data.length - 1; i += 1) {
+  for (var index = 0; index < data.length - 1; index += 1) {
 
 //this is verifying that message information actually exists//
-    if (data[i].message) {
+    if (data[index].message) {
 
 //variable created for the data through the template//
-      var rendered = msgbox(data[i]);
+      var rendered = msgbox(data[index]);
 
 //takes the data from the server and appends it to the chat screen as intended//
       $('.textappend').append(rendered);
