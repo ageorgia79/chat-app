@@ -26,7 +26,7 @@ function renderChat(data) {
       var rendered = msgbox(data[index]);
 
 //takes the data from the server and appends it to the chat screen as intended//
-      $('.textappend').append(rendered);
+      $('.textappend ').append(rendered);
     }
   }
 }
