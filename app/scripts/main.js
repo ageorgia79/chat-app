@@ -31,7 +31,7 @@ function renderChat(data) {
   }
 }
 
-function loadChat () {
+function startChat () {
 
 //gets json from the server and assigns it to data//
   $.getJSON('http://tiny-pizza-server.herokuapp.com/collections/chat-messages').done(function(data) {
@@ -81,4 +81,4 @@ $('.message').keypress(function(enter) {
   }
 })
 //reloads every one second//
-setInterval(loadChat, 1000);
+setInterval(startChat, 1000);
