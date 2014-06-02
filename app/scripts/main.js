@@ -1,13 +1,13 @@
 'use strict';
 //variable created for server messages//
 
-var myServer;
+//variable for the template created for incoming messages//
+var msgbox = _.template($('.chat-message').text());
 
 //variable created for user name//
 var user = 'Andy G';
 
-//variable for the template created for incoming messages//
-var msgbox = _.template($('.chat-message').text());
+var myServer;
 
 
 //pulls data from the server and displays it in the chat screen//
@@ -46,8 +46,11 @@ function startChat () {
 
 //here is my constructor that will create my object to be sent//
 function Message(user, message, time) {
+
   this.user = user || '';
+
   this.message = message || '';
+  
   this.time = time || '';
 }
 
@@ -67,10 +70,10 @@ $('.send').click(function() {
   var time = Date.now();
 
 //creates the outgoing instance//
-  var outgoing = new Message(user, message, time);
+  var delivery = new Message(user, message, time);
 
 //send outgoing to the server//
-  refreshChat(outgoing);
+  refreshChat(delivery);
 });
 
 //this gives the option of keypress of number 13 which is "enter" so that you dont have to click//
